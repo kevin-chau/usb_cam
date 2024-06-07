@@ -222,14 +222,6 @@ public:
       cam_.set_auto_focus(1);
       cam_.set_v4l_parameter("focus_auto", 1);
     }
-    else
-    {
-      cam_.set_v4l_parameter("focus_auto", 0);
-      if (focus_ >= 0)
-      {
-        cam_.set_v4l_parameter("focus_absolute", focus_);
-      }
-    }
   }
 
   virtual ~UsbCamNode()
